@@ -1,0 +1,496 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;800&display=swap');*/
+/* 0 Global Rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family:Roboto, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family:Roboto, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: relative;
+}
+input span {
+  text-transform:capitalize;
+}
+
+.sign-up-body {
+  display: flex;
+  justify-content:space-between;
+  flex-direction: row-reverse;
+  min-height: 100vh;
+  background-image: url(../imgs/basckII.png);
+  background-position: center;
+  flex-wrap:nowrap;
+  flex-direction: column;
+  align-items:flex-start;
+  padding:40px 60px;
+}
+.flexx {
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-start;
+  flex-direction: row-reverse;
+}
+@media (max-width: 992px) {
+  .flexx {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.additions {
+  padding:12px 24px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  height:100vh;
+  margin-left:10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 992px) {
+  .additions {
+    margin-bottom:50px;
+    width:100%;
+    height:fit-content;
+  }
+}
+.color-b {
+  color: blue;
+}
+.f-bold {
+  font-weight: bold;
+  font-size:16px;
+  line-height:1.5;
+}
+.soci {
+  display: flex;
+  flex-wrap:nowrap;
+  flex-direction:row;
+  justify-content:center;
+  align-items: center;
+  padding:12px 24px;
+  width:100%;
+}
+.soci img {
+  width:50px;
+  margin-left:5px;
+
+}
+
+a {
+  text-decoration: none;
+  color:black;
+  font-weight:bold;
+  text-transform:capitalize;
+}
+button {
+  text-transform:capitalize;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 1400px;
+  }
+}
+
+/* 0 translate */
+.translate {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:12px 24px;
+}
+.translate  span {
+  font-weight: bold;
+  margin-right:10px;
+  font-size:18px;
+}
+
+/* 1 translate */
+
+/* 1 Global Rules */
+/* 0 sign-up page */
+
+.sign-up-body .box {
+  width:380px;
+  border-radius:8px;
+  overflow:hidden;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 650px) {
+  .sign-up-body .box {
+    width: -webkit-fill-available;
+  }
+}
+
+.sign-up-body .box form {
+  inset: 4px;
+  background-color: white;
+  padding: 18px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin-top: 100px; */
+  height: 100%;
+}
+
+.icon{
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+}
+.ar-logo {
+  font-size:20px;
+}
+.en-logo {
+  margin-bottom:5px;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+ .icon img {
+  width: 150px;
+}
+.sign-up-body .box form h2 {
+  color:#000;
+  font-weight:600;
+  text-align:center;
+}
+.kind {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:20px;
+  margin-top:10px;
+  padding:13px;
+}
+.kind div a {
+  padding:10px;
+}
+.kind div .member-link:hover {
+  background-color:#003E7E;
+  color:white;
+}
+
+.kind div .company-link:hover {
+  background-color:#003E7E;
+  color:white;
+}
+
+.active {
+  background-color:#003E7E;
+  color:white;
+}
+.user-section {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(100px,auto));
+  gap: 10px 10px;
+}
+.bottom-filds {
+  margin:5px 0 0 0;
+}
+.user-section-link {
+  background-color:#003E7E;
+  padding:10px 3px;
+  border-radius:2px;
+  transition:0.5s;
+}
+.user-section-link:hover {
+  background-color:black;
+}
+.user-section-link .button {
+  color:white;
+}
+.user-section .active {
+  background-color:black;
+}
+.sign-up-body .box form .input-box{
+  position:relative;
+  width:300px;
+  margin-top:0px;
+    margin-bottom:10px;
+}
+.input-box span {
+  text-transform: capitalize;
+}
+.sign-up-body .box form .input-box input{
+  position:relative;
+  width:100%;
+  padding:25px 10px 10px;
+  background-color:transparent;
+  outline:none;
+  border:none;
+  color:white;
+  font-size:1em;
+  letter-spacing:0.05em;
+  transition:0.5s;
+  z-index:10;
+}
+
+.input-file-box {
+  padding:5px 0px;
+  font-weight:bold;
+}
+.input-file{
+  margin:15px 0px;
+}
+.input-file-box p{
+  margin:-5px;
+}
+.fist {
+  padding-top:0;
+}
+.input-file-button {
+  padding:10px;
+}
+
+.sign-up-body .box form input[type="number"]::-webkit-inner-spin-button,
+.sign-up-body .box form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance:none;
+  margin:0;
+}
+.sign-up-body .box form .input-box span {
+  position:absolute;
+  left:0;
+  padding:20px 0px 10px;
+  pointer-events:none;
+  color:#5f5f5f;
+  font-size:1em;
+  letter-spacing:0.05em;
+  transition:0.5s;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+}
+.input-file-box span {
+    display: flex;
+    flex-direction: row;
+}
+
+.sign-up-body .box form .input-box input:valid ~ span,
+.sign-up-body .box form .input-box input:focus ~ span{
+  color:#161723;
+  font-size:0.9em;
+  transform:translateY(-20px);
+}
+.sign-up-body .box form .input-box i {
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:97%;
+  height:1px;
+  background-color:#003E7E;
+  border-radius:4px;
+  overflow:hidden;
+  transition:0.5s;
+  pointer-events:none;
+  opacity:0.9;
+}
+
+.sign-up-body .box form .input-box input:valid ~ i,
+.sign-up-body .box form .input-box input:focus ~ i{
+  height:35px;
+}
+
+.file-style {
+  font-size:20px;
+    margin:5px 0px;
+}
+
+.sign-up-body .box form input[type="submit"] {
+  border:none;
+  outline:none;
+  padding:9px 25px;
+  background-color:#003E7E;
+  color:white;
+  cursor:pointer;
+  font-size:1.1em;
+  border-radius:4px;
+  font-weight:700;
+  margin-top:10px;
+  width:102%;
+  transition:0.5s;
+}
+.sign-up-body .box form input[type="submit"]:hover {
+  opacity:0.7;
+}
+
+.transfare {
+  text-align:center;
+  margin-top:15px;
+}
+.transfare a{
+  color:black;
+  background-color:transparent;
+  padding:10px;
+  font-size:20px;
+  font-weight:bold;
+}
+.transfare a:hover{
+  color:#003E7E;
+}
+
+    .custom-input-box {
+      position: relative;
+      display: inline-block;
+    }
+
+    .custom-date-input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width:100%;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .dropdown-select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 98%;
+      margin-top:10px;
+      background-color:#003E7E;
+      color:white;
+      font-family:'Roboto Slab';
+    }
+
+   .dropdown-select option {
+    margin:10px;
+    background-color:#003E7E;
+    color:white;
+    font-size:20px;
+    font-family:'Roboto Slab';
+   }
+
+   .big {
+    font-weight:bold;
+    }
+    .flex {
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+    @media (max-width: 768px) {
+      .dropdown-select option {
+      margin:0px;
+      font-size:15px;
+   }
+   .kind {
+    font-size:15px;
+   }
+  }
+/* 1 sign-up page */
+h4{
+  display: flex;
+  justify-content: center;
+}
+
+.remember-forget{
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between;
+}
+.remember-forget div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.remember-forget div input {
+  accent-color: #fc0707;
+  text-decoration: none;
+}
+.remember-forget a{
+  color:red;
+}
+
+.remember-forget a:hover{
+  color:red;
+  text-decoration:underline;
+}
+
+.register-link{
+  color:#fc0707 ;
+  display: inline;
+  vertical-align: middle;
+  font-size:1em ;
+}
+.login-register {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login-register a:hover{
+  text-decoration:underline;
+}
+.login-register p {
+  text-transform: capitalize;
+}
+.chek {
+  transform: scale(1.5); /* Increase the size of the checkbox */
+  margin:0 8px;
+}
+
+.term-link {
+  color:red;
+}
+.acceptt {
+  font-weight: bold;
+  color: black;
+  margin-left:5px;
+}
+

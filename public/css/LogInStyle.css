@@ -1,0 +1,369 @@
+/* 0 Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    max-height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+input {
+    font-weight: bold;
+    font-size: var(--midtower-font);
+}
+input:focus {
+    outline: transparent;
+}
+input::placeholder {
+    color:black;
+    font-weight: bold;
+    font-size:var(--midtower-font);
+}
+input:focus::placeholder {
+    color:#666;
+    font-weight: bold;
+    font-size:var(--midtower-font);
+    border-bottom:solid 5px #008E77;
+}
+button {
+    padding:10px 20px;
+    border:none;
+    cursor: pointer;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* 1 Global Rules */
+/* 0 Header */
+
+.navbar {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    flex-direction: row-reverse;
+    padding-bottom: 6px;
+}
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .iconsy {
+        justify-self: flex-end;
+        align-self: flex-end;
+        padding: 5px 5px 0 0;
+    }
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list .list-item {
+    padding: 20px 10px;
+    margin-left: 0px;
+    padding-left:0px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.navbar a:hover {
+    color: #0a58c4;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .navbar a {
+        font-size: 20px;
+    }
+}
+
+.menu-line {
+    width: 20px;
+    height: 3px;
+    background-color:black;
+    margin-bottom: 4px;
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .menu {
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+
+    }
+
+    .nav-list {
+        list-style-type: none;
+        text-align: center;
+        padding-top: 10px;
+        display: none;
+        overflow: hidden;
+    }
+
+    .active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0px;
+        align-items: flex-start;
+        align-self: flex-start;
+        background-color: transparent;
+    }
+}
+/* 1 Header */
+/* 0 Log in */
+
+
+.log-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.log-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #003E7E;
+    padding: 20px;
+    border-radius: 4px;
+}
+@media (max-width: 768px) {
+    .log-body {
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.log-discrip {
+    background-color: white;
+    width:55%;
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media (max-width: 768px) {
+    .log-discrip {
+        width: 100%;
+    }
+}
+.p-words {
+    font-size: 24px;
+    text-align: start;
+}
+.log-form {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 8px;
+    width: 35%;
+}
+@media (max-width: 768px) {
+    .log-form{
+        width: 100%;
+        margin:20px;
+    }
+}
+.form-head {
+    text-align: center;
+    align-self: center;
+}
+.cell {
+    display: flex;
+    flex-direction: column;
+    margin:5px 0;
+    width: 100%;
+}
+.cell-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cell-name {
+    color:#444;
+}
+.star {
+    color: red;
+    margin:0 5px;
+    align-self: center;
+}
+.cell-entery {
+    margin:8px 0;
+    background-color: #19518A;
+    border-radius: 4px;
+    border: none;
+    height: 35px;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    padding: 5px;
+}
+.cell-actions {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction:row-reverse;
+    width: 100%;
+}
+.Rememmber-me {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.chek-tir {
+    margin: 5px;
+    accent-color: #fc0707;
+    transform: scale(1.5);
+}
+.Re,
+.fo {
+    font-size: 16px;
+    font-weight: bold;
+}
+.fo {
+    color: red;
+}
+.forgit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log-in {
+    background-color: #19518A;
+    border-radius: 4px;
+    border: none;
+    height: 35px;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    padding: 5px;
+    width: 100%;
+    cursor: pointer;
+    margin: 8px 0;
+}
+.log-in:hover {
+    opacity: 0.9;
+}
+.register-link {
+    color: red;
+    font-weight: bold;
+}
+.soci {
+    padding:20px;
+}
+
+.soci-img {
+    width: 40px;
+}
+.Reg-cell {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.RE-img {
+    width: 312px;
+}
+@media (max-width: 768px) {
+    .RE-img {
+        width: 250px;
+    }
+}
+.login-photo {
+    padding: 24px 0px;
+}
+.pt-30 {
+    padding-top: 5px;
+}
+
+.f-w {
+    width: 100%;
+}
+.password-container {
+    position: relative;
+    width:100%;
+}
+
+.password-icon {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-image: url('../imgs/eye.png');
+    background-size: cover;
+}
+.password-icon-ar {
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-image: url('../imgs/eye.png');
+    background-size: cover;
+}
+/* Use the appropriate class for hiding the password */
+.hide-password .password-icon {
+    background-image: url('../imgs/hide.png');
+}
+/* 1 Log in */

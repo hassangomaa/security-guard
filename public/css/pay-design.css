@@ -1,0 +1,433 @@
+/* 0 Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  /* 0 colors */
+  --main-color:#0D47A1;
+  --main-color-alt:#2196F3;
+  --main--color-third:#CCCCCC;
+  --action-Color:#FFC107;
+  /* 1 colors */
+
+  /* 0 standerd fonts*/
+  --big-font:48px;
+  --large-font:32px;
+  --Medium-font:24px;
+  --midtower-font:20px;
+  --small-font:16px;
+  --tiny-font:14px;
+  /* 1 standerd fonts */
+
+  /* 0 padds */
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --big-padding:48px 16px;
+  --box-padding:12px 24px;
+  --special-padding: 32px 0;
+  --full-padding:24px;
+  --small-padding:16px;
+  /* 1 padds */
+
+  /* 0 marg */
+  --flex-margin-top:8px;
+  --flex-margin-bottom:8px;
+  --flex-margin-left: 16px;
+  /* 1 marg */
+
+  /*
+  big icons
+    display: block;
+    margin: 0 auto;
+    width: 110px;
+  */
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  font-weight: bold;
+  font-size: var(--midtower-font);
+  color: white;
+}
+
+input:focus {
+  outline: transparent;
+  color: white;
+}
+
+input::placeholder {
+  color:black;
+  font-weight: bold;
+  font-size:var(--small-font);
+}
+
+input:focus::placeholder {
+  color:white;
+  font-weight: bold;
+  font-size:var(--small-font);
+}
+
+button {
+  padding:10px 20px;
+  border:none;
+  cursor: pointer;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.icon-im {
+  width:30px;
+}
+
+/* 1 Global Rules */
+.pay-bills  {
+  padding: 30px;
+}
+.part-head {
+  text-align: center;
+}
+
+.roport-btn {
+  background-color:transparent;
+  border:solid 2px #0A2C58;
+  color:var(--main-color);
+  font-weight: bold;
+  transition:0.5s;
+}
+.roport-btn:hover {
+  background-color: #0A2C58;
+  border:solid 2px #0A2C58;
+  color:white;
+}
+
+.part-head img {
+  width: 200px;
+}
+
+.h-head {
+  text-align: center;
+}
+.data-lab {
+  color:var(--main-color);
+  font-weight: bold;
+}
+
+.pay-bills {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .pay-p{
+ text-align: center;
+  }
+}
+.pay-methods {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .pay-methods{
+  flex-direction: column;
+  }
+}
+
+.f-start {
+  justify-content: flex-start;
+}
+.white-box {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width:100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  border: solid 2px transparent;
+}
+@media (max-width: 768px) {
+  .white-box {
+     width: 100%;
+  }
+}
+
+.white-box:hover {
+  border: solid 2px var(--main-color);
+}
+.bank-body {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.white-box input[type="radio"] {
+  margin:0px 10px;
+}
+
+.white-box img {
+  width: 60px;
+  height: 60px;
+}
+
+.white-box h2 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.bill-info {
+  flex-basis:50%;
+  border-left:2px solid var(--main-color);
+}
+@media (max-width: 992px) {
+  .bill-info {
+    width: 100%;
+  }
+}
+
+.comp-logo {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+}
+.comp-logo img {
+  width:50px;
+}
+.pay-a {
+  color: inherit;
+}
+.pay-a:hover {
+  color:inherit;
+}
+/* 1 Bill page */
+/* ************************************************************************************************ */
+/* 0 pay-bank page*/
+.pay-layout {
+  display:flex;
+  justify-content:space-between;
+  align-items: flex-start;
+}
+@media (max-width: 768px) {
+  .pay-layout  {
+    flex-direction: column;
+  }
+}
+.photo-sec {
+  flex-basis:50%;
+  background-position:left bottom;
+  background-size:50%;
+  background-repeat: no-repeat;
+}
+.OverridePhoto {
+  flex-basis:50%;
+  background-position:left bottom;
+  background-size:50%;
+  background-repeat: no-repeat;
+}
+
+.visa-catch {
+  text-align: center;
+}
+
+.after-img{
+  width:60%;
+}
+
+.pay-info {
+  flex-basis:50%;
+}
+@media (max-width: 768px) {
+  .pay-info {
+    width:100%;
+  }
+}
+.pay-h {
+  margin-top:0px;
+  margin-bottom:10px;
+    flex-direction: row-reverse;
+}
+.pay-p {
+  margin-top: 0px ;
+  margin-bottom:20px;
+  color: white;
+  font-size:25px;
+}
+.input-field {
+  margin-bottom:15px;
+}
+.pay-label {
+  font-size:16px;
+  display:block;
+  margin-bottom: 10px;
+}
+.pay-input {
+  border-color:#ccc;
+  padding:10px;
+  border-radius: 6px;
+  display: block;
+  width:100%;
+  height: 40px;
+  background-color: #19518A;
+  border: 1px solid #ddd;
+  padding-left: 10px;
+  border-radius: 0 6px 6px 0;
+}
+.main-num {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tree {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:30%;
+}
+/* 1 pay-bank page*/
+/* ************************************************************************************************ */
+/* ************************************************************************************************ */
+/* 0 pay-bank page*/
+.pay-layout {
+  display:flex;
+  justify-content:space-between;
+  align-items: flex-start;
+}
+@media (max-width: 768px) {
+  .pay-layout  {
+    flex-direction: column;
+  }
+}
+.photo-sec {
+  flex-basis:50%;
+  background-position:left bottom;
+  background-size:50%;
+  background-repeat: no-repeat;
+}
+.OverridePhoto {
+  flex-basis:50%;
+  background-position:left bottom;
+  background-size:50%;
+  background-repeat: no-repeat;
+}
+
+.visa-catch {
+  text-align: center;
+}
+
+.after-img{
+  width:60%;
+}
+
+.pay-info {
+  flex-basis:50%;
+}
+@media (max-width: 768px) {
+  .pay-info {
+    width:100%;
+  }
+}
+.pay-h {
+  margin-top:0px;
+  margin-bottom:10px;
+}
+.pay-p {
+  margin-top: 0px ;
+  margin-bottom:20px;
+  color: gray;
+  font-size:16px;
+}
+.input-field {
+  margin-bottom:15px;
+}
+.pay-label {
+  font-size:16px;
+  display:block;
+  margin-bottom: 10px;
+}
+.pay-input {
+  border-color:#ccc;
+  padding:10px;
+  border-radius: 6px;
+  display: block;
+  width:100%;
+  height: 40px;
+  background-color: #19518A;
+  border: 1px solid #ddd;
+  padding-left: 10px;
+  border-radius: 0 6px 6px 0;
+}
+.main-num {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tree {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:30%;
+}
+
+@media (max-width: 768px) {
+  .center {
+    text-align: center;
+  }
+}
+.content {
+  padding:30px;
+}
+.c-red {
+  color: red;
+}
+.line-h {
+  line-height: 1.6;
+}
+.dis-flx {
+    display:block;
+}
+.dis-flx span {
+    font-size: 24px;
+}
+/* 1 pay-bank page*/
+/* ************************************************************************************************ */

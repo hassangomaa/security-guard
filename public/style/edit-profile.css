@@ -1,0 +1,78 @@
+.word {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 100px;
+    color: white;
+    font-size: 60px;
+    margin-top: 15px;
+    display: inline-block; /* Display the word "Shield" inline */
+    margin-right: 20px; /* Add some space between the word and buttons */
+}
+.home{
+    position: sticky;
+    display: inline-block; /* Display the buttons inline */
+    padding: 10px 20px; /* Add padding to the buttons */
+    background-color: #053466; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    margin-right: 7px; /* Add some space between the buttons */
+    margin-left: 910px;
+    border: 2px solid #fefefe; 
+}
+.big{
+    position: relative; /* or absolute */
+    left: 80px; /* adjust the value as needed */
+    top: 5px; /* adjust the value as needed */
+  }
+  .user{
+    position: relative; /* or absolute */
+    left: 1px; /* adjust the value as needed */
+    top: 15px; 
+  }
+  .contact{
+    font-size: 40px;
+    margin-top: 50px;
+    margin-left: 310px;
+    color: white;
+  }
+  .user,.pass,.date,.sub,.meet{
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .username{
+    width: 1000px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #password,#date{
+    width: 1000px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  #date{
+    margin-bottom: 60px;
+  }
+  .button3{
+    padding: 15px 25px; /* Add padding to the buttons */
+    background-color: #053466; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    margin-top: 900px;
+    margin-right: 7px; /* Add some space between the buttons */
+    margin-left: 480px;
+    border: 2px solid #fefefe; 
+}
+ 
+  .form{
+    margin-top: 80px;
+    border: 2px solid #fefefe;
+    width: 100%;
+    padding-left: 130px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #053466;
+  }
+  

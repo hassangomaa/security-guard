@@ -1,0 +1,76 @@
+.word {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 100px;
+    color: white;
+    font-size: 60px;
+    margin-top: 15px;
+    display: inline-block; /* Display the word "Shield" inline */
+    margin-right: 20px; /* Add some space between the word and buttons */
+}
+.home{
+    position: sticky;
+    display: inline-block; /* Display the buttons inline */
+    padding: 10px 20px; /* Add padding to the buttons */
+    background-color: #053466; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    margin-right: 7px; /* Add some space between the buttons */
+    margin-left: 910px;
+    border: 2px solid #fefefe; 
+}
+.big{
+    position: relative; /* or absolute */
+    left: 80px; /* adjust the value as needed */
+    top: 5px; /* adjust the value as needed */
+  }
+  .user{
+    position: relative; /* or absolute */
+    left: 1px; /* adjust the value as needed */
+    top: 15px; 
+  }
+.log {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    text-align: center;
+}
+.square {
+    border: 2px solid #fefefe;
+    width: 300px;
+    padding: 50px 50px;
+    background-color: #053466;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ch-user{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1px; /* Adjust the margin to reduce space between elements */
+    margin-bottom: 22px;
+}
+.pass {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px; /* Adjust the margin to reduce space between elements */
+    margin-left: 25px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    margin-right: 1px; /* Adjust the margin to reduce space between elements */
+    margin-left: 1px; /* Adjust the margin to reduce space between elements */
+    padding-right: 80px;
+    display: inline-block;
+    color: white;
+}
+.logout{
+    margin-left: 55px;
+
+}
+

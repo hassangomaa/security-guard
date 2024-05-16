@@ -1,0 +1,135 @@
+h3{
+    color: white;
+    left: 60px;
+    position: relative;
+    font-size: 60px;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+h4{
+    color: white;
+    left: 60px;
+    position: relative;
+    font-size: 40px;
+    margin-left: 100px;
+}
+
+.word {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 100px;
+    color: white;
+    font-size: 60px;
+    margin-top: 15px;
+    display: inline-block; /* Display the word "Shield" inline */
+    margin-right: 20px; /* Add some space between the word and buttons */
+}
+.big{
+    position: relative; /* or absolute */
+    left: 80px; /* adjust the value as needed */
+    top: 5px; /* adjust the value as needed */
+  }
+
+.button1{
+    position: sticky;
+    display: inline-block; /* Display the buttons inline */
+    padding: 10px 20px; /* Add padding to the buttons */
+    background-color: #053466; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    margin-right: 7px; /* Add some space between the buttons */
+    margin-left: 830px;
+    border: 2px solid #fefefe; 
+}
+.button2 {
+    display: inline-block; /* Display the buttons inline */
+    padding: 10px 20px; /* Add padding to the buttons */
+    background-color: #053466; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    margin-right: 10px; /* Add some space between the buttons */
+    margin-left: 7px;
+    border: 2px solid #fefefe; 
+}
+.Blogcontent{
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  background-color: #053466;
+  border: 2px solid #fefefe; 
+  padding: 10px 20px;
+  margin-left: 7px; 
+  margin-right: 2px;
+
+
+}
+
+  .service-table {
+    margin-top: 100px;
+    width: 70%;
+    border-collapse: collapse;
+    border-color: #fefefe;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-left: 180px; /* Add auto margin for left and right to center horizontally */
+    margin-right: auto;
+    background-color: #053466;
+    margin-bottom: 120px;
+}
+  th{
+    font-size: 40px;
+  }
+  .service-table th, .service-table td {
+    font: bold;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fbfdff;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  .contact{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 580px;
+    color: white;
+  }
+  .username{
+    width: 750px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-left: 300px;
+  }
+  #password,#date,#selector,#meet{
+    margin-left: 300px;
+    width: 750px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  #meet{
+    margin-bottom: 50px;
+  }
+  .button3{
+    font-size: 20px;
+    padding: 15px 30px; /* Add padding to the buttons */
+    background-color: #053466; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    margin-right: 7px; /* Add some space between the buttons */
+    margin-left: 620px;
+    border: 2px solid #fefefe; 
+}
+ 
+  .form{
+    border: 2px solid #fefefe;
+    width: 100%;
+    /* padding-left: 30px; */
+    /*margin-left: 320px;*/
+    background-color: #053466;
+  }
+  

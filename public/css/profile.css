@@ -1,0 +1,303 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;800&display=swap');*/
+/* 0 Global Rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --xxfont: 32px;
+    --xfont: 24px;
+    --lfont: 20px;
+    --mfont: 18px;
+    --sfont: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+button {
+    text-transform: capitalize;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 1400px;
+    }
+}
+
+.page {
+    margin: 60px 0px;
+}
+
+.prof {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+
+
+@media (max-width: 768px) {
+    .prof {
+        flex-direction: column;
+    }
+}
+
+input::placeholder {
+    color: black;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    padding: 8px 0px;
+    border-radius: 10px;
+    color: black;
+}
+
+input::after {
+    position: absolute;
+}
+
+
+.l-gird {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    background-color: white;
+    flex: 1;
+    padding:23px;
+    height: 303px;
+    border:solid #ccc 5px;
+    margin: 0px 10px;
+}
+
+@media (max-width: 768px) {
+    .l-gird {
+        width: 100%;
+        margin: 0px 0px 20px;
+    }
+}
+
+.pers-photo {
+    width: 200px;
+}
+
+.per-icon {
+    position: absolute;
+    width: 30px;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.upload-photo {
+    padding: 10px;
+    color: white;
+    background-color: #111926;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size:1.5em;
+    margin:10px 10px 0 0;
+}
+
+.pers-photo {
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+.line {
+    position: relative;
+}
+
+.line::after {
+    content: " ";
+    width: 96%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+.up-btn {
+    padding: 10px;
+    color: white;
+    background-color: #111926;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size:1.5em;
+}
+.date {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    font-size: var(--main-font);
+    color: black;
+    text-transform: capitalize;
+    position: relative;
+
+}
+
+.date div {
+    font-size:25px;
+    font-weight:bold;
+    padding: 10px 20px;
+}
+.date div span {
+    font-weight:100;
+}
+@media (max-width: 991px) {
+    .date div {
+      font-size:18px;
+    }
+  }
+  @media (max-width: 750px) {
+    .date div {
+      font-size:14px;
+    }
+  }
+
+
+.num-date {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.t-grid {
+    background-color: white;
+    width: 100%;
+    flex:3;
+    height:303px;
+    border:solid #ccc 5px;
+}
+.edit-a {
+    padding: 7px;
+}
+.pen-icon {
+    width:30px;
+}
+.flex-a-edite {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction:row-reverse;
+}
+.name-edit {
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+}
+
+.edite-btnn {
+    position: relative;
+}
+
+.personal-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    font-size: var(--main-font);
+    font-weight: bold;
+    color: black;
+    text-transform: capitalize;
+    position: relative;
+    padding: 15px 0px 0px;
+}
+
+.personal-info::after {
+    content: " ";
+    width: calc(100%);
+    height: 3px;
+    background: black;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+.personal-info button {
+    padding: 10px;
+    color: black;
+    background-color: #cdcdcd;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
+
+.name {
+    margin-top: 50px;
+}
+
+.age {
+    padding: 23px 0px;
+}
+
+

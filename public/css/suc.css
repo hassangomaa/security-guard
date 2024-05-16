@@ -1,0 +1,77 @@
+
+    .catch
+    {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        height: 90vh;
+        align-items: center;
+    }
+    .cought {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        background-color:#f6f6f6;
+        box-shadow: 0 12px 24px rgba(19,22,25,0.1);
+        margin-top: 10px;
+
+    }
+    .hold-img {
+        text-align: center;
+    }
+    .enter-btn {
+        align-self:center;
+        padding:10px;
+        background:#001D3F;
+        color: white;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    .entr-link {
+        color: white;
+        text-decoration: none;
+    }
+    .right-img {
+        width:100px;
+    }
+    .h1-cought {
+        text-align: center;
+    }
+    .flex-between{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-direction: row;
+        font-size:30px;
+        margin:10px 0;
+        padding: 8px 20px;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+        .flex-between div {
+            font-size:16px;
+            overflow:hidden;
+        }
+    }
+
+    .flex-center {
+        display: flex;
+        justify-content:space-evenly;
+        align-content: center;
+        flex-direction: row;
+        font-size:25px;
+        margin:10px 0;
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+
+.ccc {
+    color: #888;
+}
+
+.bold {
+    font-weight: bold;
+}

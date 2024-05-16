@@ -1,0 +1,83 @@
+.word {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 100px;
+    color: white;
+    font-size: 60px;
+    margin-top: 15px;
+    display: inline-block; /* Display the word "Shield" inline */
+    margin-right: 20px; /* Add some space between the word and buttons */
+}
+.big{
+    position: relative; /* or absolute */
+    left: 80px; /* adjust the value as needed */
+    top: 5px; /* adjust the value as needed */
+  }
+  .home{
+    position: sticky;
+    display: inline-block; /* Display the buttons inline */
+    padding: 10px 20px; /* Add padding to the buttons */
+    background-color: #053466; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    margin-right: 7px; /* Add some space between the buttons */
+    margin-left: 920px;
+    border: 2px solid #fefefe; 
+}
+.sign {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    display: inline-block;
+    width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
+    color: white;
+    text-align: left; /* Menyusun teks label ke kanan */
+}
+input {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+.container {
+    text-align: center;
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+.square {
+    border: 2px solid #fefefe;
+    width: 300px;
+    padding: 50px 60px;
+    background-color: #053466;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.input-container {
+    position: relative;
+}
+
+button {
+    display: inline-block;
+    margin-left: 80px;
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px 10px;
+    background-color: #053466;
+    color: #fff;
+    border: 2px solid #fefefe;
+    border-radius: 5px;
+    cursor: pointer;
+}

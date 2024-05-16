@@ -1,0 +1,105 @@
+.word {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 100px;
+    color: white;
+    font-size: 60px;
+    margin-top: 15px;
+    display: inline-block; /* Display the word "Shield" inline */
+    margin-right: 20px; /* Add some space between the word and buttons */
+}
+.home{
+    position: sticky;
+    display: inline-block; /* Display the buttons inline */
+    padding: 10px 20px; /* Add padding to the buttons */
+    background-color: #053466; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    margin-right: 7px; /* Add some space between the buttons */
+    margin-left: 910px;
+    border: 2px solid #fefefe; 
+}
+.big{
+    position: relative; /* or absolute */
+    left: 80px; /* adjust the value as needed */
+    top: 5px; /* adjust the value as needed */
+  }
+  .user{
+    position: relative; /* or absolute */
+    left: 1px; /* adjust the value as needed */
+    top: 15px; 
+  }
+  .result{
+    background-color: #053466;
+  }
+  #ip{
+    align-items: center;
+    width: 25%;
+    margin: 10px 0;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    padding-left: 130px;
+    margin-left: 500px;
+    margin-top: 60px;
+}
+  .service-table {
+    margin-top: 20px;
+    width: 70%;
+    border-collapse: collapse;
+    border-color: #fefefe;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-left: 180px; /* Add auto margin for left and right to center horizontally */
+    margin-right: auto;
+    background-color: #053466;
+    margin-bottom: 120px;
+}
+  th{
+    font-size: 40px;
+  }
+  .service-table th, .service-table td {
+    font: bold;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fbfdff;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  button {
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 5%;
+    padding: 10px 10px;
+    background-color: #053466;
+    color: #fff;
+    border: 2px solid #fefefe;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.red-circle {
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%; /* Ensure the shape is a circle */
+    margin-left: 125px;
+    margin-right: 10px;
+}
+.yellow-circle {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(246, 238, 14, 0.996);
+    border-radius: 50%; /* Ensure the shape is a circle */
+    margin-left: 125px;
+    margin-right: 10px;
+}
+.blue-circle {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(6, 9, 241, 0.996);
+    border-radius: 50%; /* Ensure the shape is a circle */
+    margin-left: 125px;
+    margin-right: 10px;
+}

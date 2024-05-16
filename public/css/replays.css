@@ -1,0 +1,196 @@
+.commentos-container {
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.commento {
+  margin-bottom: 10px;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.commento-header,
+.reply-header {
+  display: flex;
+  align-items: center;
+}
+
+.pdf {
+  color: #003E7E;
+  border: 2px solid #003E7E;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  transition:0.5s;
+  border-radius:5px;
+}
+.pdf:hover {
+  background-color: #003E7E;
+  color: white;
+}
+.commento-header div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.text {
+  position: revert;
+}
+
+.write-area {
+  align-self: flex-end;
+  width: 100%;
+}
+
+.commento-flex {
+  display: flex;
+  position: relative;
+  /* Add this line */
+  background-color: #ddd;
+}
+
+.multiline-inputo {
+  resize: vertical;
+  border: 2px solid #555;
+  padding: 10px;
+  background: none;
+  width: 100%;
+  font-weight: bold;
+  min-height: 50px;
+  height: fit-content;
+  font-size: 18px;
+  color: revert-layer;
+  border-radius: 5px;
+}
+
+#try {
+  padding-right: 20px;
+  background-color: white;
+}
+
+.multiline-inputo:hover {
+  border: 2px solid #092A55;
+}
+
+.multiline-inputo:focus {
+  border: 1px solid #092A55;
+}
+
+.multiline-inputo:focus {
+  border: 1px solid #111926;
+}
+
+.commento-author,
+.reply-author {
+  font-weight: bold;
+}
+
+.commento-icon {
+  position: absolute;
+  /* Position the icon absolutely */
+  bottom: 36px;
+  right: 10px;
+  /* Adjust the distance from the left */
+  width: 20px;
+  height: 20px;
+  background-image: url(../imgs/right-arrow.png);
+  /* Replace with the path to your icon */
+  background-size: cover;
+  cursor: pointer;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.file-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../imgs/attachment.png);
+  /* Replace with the path to your icon */
+  background-size: cover;
+}
+
+.commento-content,
+.reply-content {
+  margin: 20px 0px;
+}
+
+.reply-content {
+  display: flex;
+  overflow: hidden;
+}
+
+.reply-button {
+  background-color: #003E7E;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.reply {
+  margin-top: 10px;
+  background-color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+}
+
+.reply .reply-header div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.replies-container {
+  display: none;
+}
+
+.show-replies {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.reply-content p {
+  margin-bottom: 1px;
+  font-weight: 400;
+}
+
+@media (max-width: 991px) {
+  .reply-content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 750px) {
+  .reply-content p {
+    font-size: 15px;
+  }
+}

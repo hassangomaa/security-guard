@@ -1,0 +1,81 @@
+.Veryfy
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 59px;
+}
+.main-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      max-width: 100%;
+      text-align: center;
+
+    }
+
+    .main-content h2 {
+      margin-top: 0;
+      color: #001D3F;
+    }
+
+    .main-content input {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+      width: 93%;
+      background-color:#001D3F;
+      color: white;
+    }
+    input::placeholder {
+        color: white;
+    }
+
+    .main-content .buttons {
+      padding: 10px 20px;
+      background-color: #001D3F;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .main-content .buttons:hover {
+      background-color: #0056b3;
+    }
+
+    .code-box,
+    .new-password-box {
+      display: none;
+    }
+
+    .status-message {
+      color:red;
+      font-size: 18px;
+    }
+
+    .error-message {
+      color: #dc3545;
+      font-size: 14px;
+    }
+    .resend-btn {
+        background-color: transparent;
+        font-size: 16px;
+        color: black;
+        cursor: pointer;
+        padding: 6px;
+        color: red;
+        border-radius: 4px;
+        border-color:red;
+        transition: 0.5s;
+    }
+    .resend-btn:hover {
+        background-color:red;
+        color: white;
+    }
