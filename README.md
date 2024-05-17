@@ -1,66 +1,113 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Security Guard
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Security Guard is a web application designed to perform comprehensive security scans on provided domains or IP addresses. The application integrates with OpenVAS, ZAP Proxy, and Nmap to detect various vulnerabilities, including those listed in the OWASP Top 10.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+-   **Light and Deep Scans**: Users can choose between light and deep scans for both IP addresses and domains using Nmap.
+-   **OpenVAS Integration**: Perform detailed security scans using OpenVAS to detect a wide range of vulnerabilities.
+-   **ZAP Proxy Integration**: Execute automated security tests using ZAP Proxy to identify issues such as XSS, SQL injection, and more.
+-   **Detailed Scan Results**: Scan results are parsed and displayed in a user-friendly table format.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requirements
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   PHP 7.4 or higher
+-   Laravel 8.x
+-   Composer
+-   Nmap
+-   OpenVAS
+-   ZAP Proxy
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. **Clone the repository:**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+    ```bash
+    git clone https://github.com/your-username/security-guard.git
+    cd security-guard
+    ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. **Install dependencies:**
 
-## Laravel Sponsors
+    ```bash
+    composer install
+    npm install
+    npm run dev
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+3. **Copy the `.env` file:**
 
-### Premium Partners
+    ```bash
+    cp .env.example .env
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+4. **Generate the application key:**
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5. **Set up your database in the `.env` file and run migrations:**
+
+    ```bash
+    php artisan migrate
+    ```
+
+6. **Set up Nmap, OpenVAS, and ZAP Proxy:**
+
+    - Install and configure [Nmap](https://nmap.org/download.html).
+    - Install and configure [OpenVAS](https://www.openvas.org/setup.html).
+    - Install and configure [ZAP Proxy](https://www.zaproxy.org/download/).
+
+## Usage
+
+1. **Access the web interface:**
+
+    Open your browser and navigate to `http://localhost:8000`.
+
+2. **Submit a scan:**
+
+    - Go to the scan form.
+    - Enter either a domain or an IP address.
+    - Select the type of scan you want to perform (Light, Deep, OpenVAS, ZAP Proxy).
+    - Click the "Run" button.
+
+3. **View scan results:**
+
+    After the scan completes, the results will be displayed in a table format, showing detected vulnerabilities.
+
+## Routes
+
+-   `/` - Home page.
+-   `/register` - User registration page.
+-   `/login` - User login page.
+-   `/logout` - User logout.
+-   `/settings` - User settings page.
+-   `/URL-option` - Scan submission form.
+-   `/ip-result` - Display results for IP scans.
+-   `/domain-result` - Display results for domain scans.
+
+## Security Scanning Commands
+
+-   **Light IP Scan**: `nmap -T4 -F <IP>`
+-   **Deep IP Scan**: `nmap -sV -sS -sC -A <IP>`
+-   **Light Domain Scan**: `nmap -T4 -F <Domain>`
+-   **Deep Domain Scan**: `nmap -sV -sS -sC -A <Domain>`
+-   **OpenVAS Scan**: `openvas-cli <Target>`
+-   **ZAP Proxy Scan**: `zap-cli quick-scan <Target>`
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a new Pull Request.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions or need further assistance, please feel free to contact us at support@securityguard.com.
