@@ -7,7 +7,7 @@
 <body style="margin: 0;background-image: url('assets/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
     
     <div class="container">
-        <div class="word">Shield</div>
+        <div class="word">Guard</div>
         <img src="assets/big-shield.png" alt="shield" width="50" height="50" class="big">
         <a href="login" class="button1">Login</a>
         <a href="{{route('register')}}" class="button2">Register</a>

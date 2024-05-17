@@ -22,7 +22,7 @@ background-position: center;
 background-attachment: fixed;
 ">
     
-    <div class="word">Shield</div>
+    <div class="word">Guard</div>
     <img src="assets/big-shield.png" alt="shield" width="50" height="50" class="big">
     <a href="index" class="home">Home</a>
     

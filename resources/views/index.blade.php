@@ -7,12 +7,23 @@
 <body style="margin: 0;background-image: url('assets/background.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
     
     <div class="container">
-        <div class="word">Shield</div>
+        <div class="word">Guard</div>
         <img src="assets/big-shield.png" alt="shield" width="50" height="50" class="big">
-        <a href="login" class="button1">Login</a>
-        <a href="{{route('register')}}" class="button2">Register</a>
-        <a href="/blogs" class="Blogcontent"> Blogs</a>
-        <a href="/contacts" class="Blogcontent"> contacts</a>
+        
+       @guest
+            <a href="{{ route('login') }}" class="button1">Login</a>
+            <a href="{{ route('register') }}" class="button2">Register</a>
+        @else
+            <a href="{{ route('URL-option') }}" class="button1">URL-option</a>
+            <a href="{{ route('showProfile') }}" class="button2">Profile</a>
+            {{-- <a href="{{ route('logout') }}" class="button2"
+               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+               Logout
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form> --}}
+        @endguest
         
      </div>
     
