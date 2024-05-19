@@ -18,6 +18,13 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+
+    public function ola(Request $request)
+    {
+        $name = $request->name;
+        return view('ola', ['name' =>  $name]);
+    }
+
     public function showLoginForm()
     {
         return view('login');
@@ -49,7 +56,9 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
+        // dd($request);
 
+        // return $request;
         $this->validateLogin($request);
 
         if ($this->attemptLogin($request)) {

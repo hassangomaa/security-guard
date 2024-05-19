@@ -41,6 +41,14 @@ Route::middleware(['guest'])->group(function () {
     // Login Routes
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [LoginController::class, 'login']);
+
+
+
+
+    Route::get('/ola', [LoginController::class, 'ola'])->name('ola');
+
+
+
 });
 // Route::view('/login', 'login');
 // Route::view('/sign-up', 'sign-up');
@@ -49,6 +57,7 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 Route::view('/edit-password', 'edit-password');
+Route::view('/', 'index');
 Route::view('/', 'index');
 Route::view('/index', 'index')->name('home');
 // Route::view('/settings', 'settings');
