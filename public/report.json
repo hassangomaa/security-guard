@@ -1,0 +1,107 @@
+{
+    "domain": "http://127.0.0.1/DVWA/login.php",
+    "endpoints": [
+        "http://127.0.0.1/DVWA/login.php/search",
+        "http://127.0.0.1/DVWA/login.php/index",
+        "http://127.0.0.1/DVWA/login.php/profile",
+        "http://127.0.0.1/DVWA/login.php/dashboard",
+        "http://127.0.0.1/DVWA/login.php/contact",
+        "http://127.0.0.1/DVWA/login.php/admin",
+        "http://127.0.0.1/DVWA/login.php/login",
+        "http://127.0.0.1/DVWA/login.php/home",
+        "http://127.0.0.1/DVWA/login.php/register",
+        "http://127.0.0.1/DVWA/login.php/api",
+        "http://127.0.0.1/DVWA/login.php/settings"
+    ],
+    "vulnerabilities": [
+        {
+            "name": "Cross-Site Scripting",
+            "type": "XSS",
+            "description": "Potential XSS vulnerability detected.",
+            "endpoint": "http://127.0.0.1/DVWA/login.php",
+            "fix": "Sanitize and encode user inputs."
+        }
+    ],
+    "threat_intelligence": {
+        "sections": [
+            "general",
+            "geo",
+            "url_list",
+            "passive_dns",
+            "malware",
+            "whois",
+            "http_scans"
+        ],
+        "whois": "http://whois.domaintools.com/google.com",
+        "alexa": "http://www.alexa.com/siteinfo/google.com",
+        "indicator": "google.com",
+        "type": "domain",
+        "type_title": "Domain",
+        "validation": [
+            {
+                "source": "ad_network",
+                "message": "Whitelisted ad network domain www-google-analytics.l.google.com",
+                "name": "Whitelisted ad network domain"
+            },
+            {
+                "source": "akamai",
+                "message": "Akamai rank: #3",
+                "name": "Akamai Popular Domain"
+            },
+            {
+                "source": "alexa",
+                "message": "Alexa rank: #1",
+                "name": "Listed on Alexa"
+            },
+            {
+                "source": "false_positive",
+                "message": "Known False Positive",
+                "name": "Known False Positive"
+            },
+            {
+                "source": "majestic",
+                "message": "Whitelisted domain google.com",
+                "name": "Whitelisted domain"
+            },
+            {
+                "source": "whitelist",
+                "message": "Whitelisted domain google.com",
+                "name": "Whitelisted domain"
+            }
+        ],
+        "base_indicator": {
+            "id": 12915,
+            "indicator": "google.com",
+            "type": "domain",
+            "title": "",
+            "description": "",
+            "content": "",
+            "access_type": "public",
+            "access_reason": ""
+        },
+        "pulse_info": {
+            "count": 0,
+            "pulses": [],
+            "references": [],
+            "related": {
+                "alienvault": {
+                    "adversary": [],
+                    "malware_families": [],
+                    "industries": []
+                },
+                "other": {
+                    "adversary": [],
+                    "malware_families": [],
+                    "industries": []
+                }
+            }
+        },
+        "false_positive": [
+            {
+                "assessment": "accepted",
+                "assessment_date": "2021-05-19T15:37:54.331000",
+                "report_date": "2021-05-01T10:55:33.601000"
+            }
+        ]
+    }
+}

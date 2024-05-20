@@ -68,17 +68,21 @@ Route::get('/edit-profile', [ProfileController::class, 'editProfile'])->name('ed
 Route::post('/update-profile', [ProfileController::class, 'updateProfile'])->name('updateProfile');
 
 
-// Route::view('/URL-option', 'URL-option')->name('URL-option');
 Route::get('/URL-option', [ScanController::class, 'showForm'])->name('URL-option');
+Route::get('/domain-result', [ScanController::class, 'domain_result'])->name('domain-result');
 
 //scan
 Route::post('/scan', [ScanController::class, 'scan'])->name('scan');
+
+
+
+
 //ip-result
-Route::get('/ip-result', [ScanController::class, 'ip_result'])->name('ip-result');
+//Route::get('/ip-result', [ScanController::class, 'ip_result'])->name('ip-result');
 //domain-result
-Route::get('/domain-result', [ScanController::class, 'domain_result'])->name('domain-result');
+// Route::get('/domain-result', [ScanController::class, 'domain_result'])->name('domain-result');
 //port-result
-Route::get('/port-result', [ScanController::class, 'port_result'])->name('port-result');
+//Route::get('/port-result', [ScanController::class, 'port_result'])->name('port-result');
 
 
 // Route::view('/domain-result', 'domain-result');
@@ -90,17 +94,17 @@ Route::get('/port-result', [ScanController::class, 'port_result'])->name('port-r
 
 
 
-Route::view('/welcome', 'welcome');
+//Route::view('/welcome', 'welcome');
 
 
 
 
 
-Route::get('/blogs', [BlogController::class, 'showAllBlogs']);
+//Route::get('/blogs', [BlogController::class, 'showAllBlogs']);
 //show one blog
-Route::get('/blogs/{id}', [BlogController::class, 'showOneBlog'])->name('blogs.showOneBlog');
+//Route::get('/blogs/{id}', [BlogController::class, 'showOneBlog'])->name('blogs.showOneBlog');
 //contacts
-Route::get('/contacts', [BlogController::class, 'showContactMe'])->name('contacts');
+//Route::get('/contacts', [BlogController::class, 'showContactMe'])->name('contacts');
 
 
 

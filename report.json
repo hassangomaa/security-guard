@@ -1,0 +1,28 @@
+{
+    "domain": "http://127.0.0.1/DVWA/login.php",
+    "endpoints": [
+        "http://127.0.0.1/DVWA/login.php/register",
+        "http://127.0.0.1/DVWA/login.php/api",
+        "http://127.0.0.1/DVWA/login.php/contact",
+        "http://127.0.0.1/DVWA/login.php/dashboard",
+        "http://127.0.0.1/DVWA/login.php/admin",
+        "http://127.0.0.1/DVWA/login.php/index",
+        "http://127.0.0.1/DVWA/login.php/home",
+        "http://127.0.0.1/DVWA/login.php/login",
+        "http://127.0.0.1/DVWA/login.php/settings",
+        "http://127.0.0.1/DVWA/login.php/search",
+        "http://127.0.0.1/DVWA/login.php/profile"
+    ],
+    "vulnerabilities": [
+        {
+            "name": "Cross-Site Scripting",
+            "type": "XSS",
+            "description": "Potential XSS vulnerability detected.",
+            "endpoint": "http://127.0.0.1/DVWA/login.php",
+            "fix": "Sanitize and encode user inputs."
+        }
+    ],
+    "threat_intelligence": {
+        "error": "Failed to fetch data from OTX: 404"
+    }
+}

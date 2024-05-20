@@ -46,17 +46,7 @@
     <label for="url" class="light">Domain</label>
     <input type="url" id="url" name="url" placeholder="Enter URL" />
 
-    <label for="ip" class="light">IP</label>
-    <input type="text" id="ip" name="ip" placeholder="Enter IP Address"
-        pattern="^((25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)$" />
 
-    <input type="number" id="port" name="port" placeholder="Ports" />
-
-    <input type="radio" id="light" name="scan_type" value="light" class="light" />
-    <label for="light" class="light">Light</label>
-
-    <input type="radio" id="deep" name="scan_type" value="deep" class="deep" />
-    <label for="deep" class="deep">Deep</label>
 
     <button type="submit" style="color: white;">Run</button>
 </form>
