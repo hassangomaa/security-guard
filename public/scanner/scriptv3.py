@@ -109,10 +109,13 @@ def generate_report(domain, endpoints, nikto_results, sqli_results, xss_results,
             "fix": "Sanitize and encode user inputs."
         })
 
-    with open("report.json", "w") as report_file:
+
+    report_path = os.path.join(os.path.dirname(__file__), "report.json")
+    with open(report_path, "w") as report_file:
         json.dump(report, report_file, indent=4)
 
-    print("Report generated: report.json")
+    print("Report generated:", report_path)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
@@ -121,7 +124,7 @@ if __name__ == "__main__":
     domain = sys.argv[1]
     otx_api_key = sys.argv[2]
     # domain = input("Enter the domain to scan: ")
-    domain = "http://127.0.0.1/DVWA/login.php"
+    # domain = "http://127.0.0.1/DVWA"
     # domain = "google.com"
     # # otx_api_key = input("Enter your AlienVault OTX API key: ")
     # otx_api_key = "9cba3bfba5af5903b0f2936248831d654a6b04d0f22532ac78e1ff800edc9e08"

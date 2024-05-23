@@ -21,13 +21,17 @@ class ScanController extends Controller
             $url = $request->input('url');
             $otxApiKey = env('OTX_API_KEY'); // Ensure this is set in your .env file
             
-            $reportPath = public_path('/scanner/report.json');
+            $reportPath = ('/home/ubuntu/Downloads/security-guard/public/scanner/report.json');
 
-            
+                    // Delete the existing report.json if it exists
+        if (file_exists($reportPath)) {
+            unlink($reportPath);
+        }
+        
             // Call the Python script
             $command = escapeshellcmd("python3 /home/ubuntu/Downloads/security-guard/public/scanner/scriptv3.py $url $otxApiKey");
             shell_exec($command);
-            sleep(60);
+            //sleep(60);
     
             // Initialize variables for file existence check
             $maxRetries = 10; // Maximum number of retries
