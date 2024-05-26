@@ -73,6 +73,7 @@ Route::get('/domain-result', [ScanController::class, 'domain_result'])->name('do
 
 //scan
 Route::post('/scan', [ScanController::class, 'scan'])->name('scan');
+Route::get('/download-report', [ScanController::class, 'downloadReport'])->name('downloadReport');
 
 
 

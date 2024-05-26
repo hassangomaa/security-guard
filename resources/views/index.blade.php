@@ -10,20 +10,9 @@
         <div class="word">Guard</div>
         <img src="assets/big-shield.png" alt="shield" width="50" height="50" class="big">
         
-       @guest
-            <a href="{{ route('login') }}" class="button1">Login</a>
-            <a href="{{ route('register') }}" class="button2">Register</a>
-        @else
+      
             <a href="{{ route('URL-option') }}" class="button1">URL-option</a>
-            <a href="{{ route('showProfile') }}" class="button2">Profile</a>
-            {{-- <a href="{{ route('logout') }}" class="button2"
-               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-               Logout
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form> --}}
-        @endguest
+            
         
      </div>
     
