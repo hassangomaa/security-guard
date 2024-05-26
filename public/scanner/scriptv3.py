@@ -9,19 +9,24 @@ import logging
 def check_tool_installed(tool_name):
     """Check if a tool is installed and available in the system PATH."""
     try:
-        subprocess.check_output([tool_name, '--version'])
+        subprocess.check_output([tool_name, '--help'])
     except FileNotFoundError:
         print(f"Error: {tool_name} is not installed or not found in the system PATH.")
         exit(1)
+    except subprocess.CalledProcessError:
+        print(f"Error: {tool_name} --help returned a non-zero exit status.")
+        exit(1)
 
 def run_ptt_scan(target):
-    check_tool_installed('docker')
+    """Run PTT scan on the target and return the results."""
+    check_tool_installed('ptt')
     print(f"Running PTT scan on {target}")
-    ptt_cmd = ["sudo", "docker", "run", "--rm", "-it", "pentesttoolscom/ptt-scan:latest", "run", "website_scanner", target]
+    ptt_cmd = ["ptt", "run", "website_scanner", target]
     result = subprocess.check_output(ptt_cmd).decode()
     print("PTT scan results:")
     print(result)
     return result
+
 
 def check_threat_intelligence(domain, api_key):
     print(f"Checking threat intelligence for {domain}")
@@ -113,8 +118,8 @@ if __name__ == "__main__":
     ptt_results_path = save_ptt_results(ptt_results)
 
     # Step 2: Fetch threat intelligence data
-    domain2 = "google.com"
-    threat_intel = check_threat_intelligence(domain2, otx_api_key)
+    # domain2 = "google.com"
+    threat_intel = check_threat_intelligence(domain, otx_api_key)
 
     # Step 3: Parse PTT scan results
     parsed_vulns = parse_ptt_results(ptt_results_path)

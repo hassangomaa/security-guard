@@ -19,8 +19,8 @@
 
     <h3>Welcome</h3>
     <h4>We help you <br> to assess your security website <br>by providing many services</h4> 
-    <table class="service-table">
-        <tr>
+    <!-- <table class="service-table"> -->
+        <!-- <tr>
           <th>Services</th>
           <th>Light</th>
           <th>Deep</th>
@@ -55,7 +55,7 @@
           <td>&#10008;</td>
           <td>&#10004;</td>
         </tr>
-      </table>
+      </table> -->
       
         {{-- <br><br><br><br><br><br><br><br><br><br><br><br><br>
       <div class="form">
@@ -101,7 +101,9 @@
         
       </form>
       <br><br><br>
-    </div> --}}
+    <!-- </div> -->
+    
+    --}}
     
 </body>
 </html>
