@@ -21,8 +21,7 @@ class ScanController extends Controller
             $url = $request->input('url');
             $otxApiKey = env('OTX_API_KEY'); // Ensure this is set in your .env file
             
-            $reportPath = ('/home/ubuntu/Downloads/security-guard/public/scanner/reportV7_2.json');
-
+            $reportPath = public_path('scanner/reportV7_2.json');
                     // Delete the existing report.json if it exists
         // if (file_exists($reportPath)) {
         //     unlink($reportPath);
