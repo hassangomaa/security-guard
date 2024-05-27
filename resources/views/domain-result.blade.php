@@ -73,30 +73,44 @@
             </div>
         </div>
         <div class="card mb-4">
-            <div class="card-header">
-                Threat Intelligence
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>Source</th>
-                                <th>Message</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($report['threat_intelligence']['validation'] as $intel)
-                                <tr>
-                                    <td>{{ ucfirst($intel['source']) }}</td>
-                                    <td>{{ $intel['message'] }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    <div class="card-header">
+        Threat Intelligence
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Source</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($report['threat_intelligence']['validation'] as $intel)
+                        <tr>
+                            <td>{{ ucfirst($intel['source']) }}</td>
+                            <td>{{ $intel['message'] }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
+        <hr>
+        <h5>Additional Information</h5>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>WHOIS:</strong> <a href="{{ $report['threat_intelligence']['whois'] }}" target="_blank">{{ $report['threat_intelligence']['whois'] }}</a></li>
+            <li class="list-group-item"><strong>Alexa:</strong> <a href="{{ $report['threat_intelligence']['alexa'] }}" target="_blank">{{ $report['threat_intelligence']['alexa'] }}</a></li>
+            <li class="list-group-item"><strong>Indicator:</strong> {{ $report['threat_intelligence']['indicator'] }}</li>
+            <li class="list-group-item"><strong>Type:</strong> {{ $report['threat_intelligence']['type'] }}</li>
+            <li class="list-group-item"><strong>Type Title:</strong> {{ $report['threat_intelligence']['type_title'] }}</li>
+            <li class="list-group-item"><strong>Server:</strong> {{ $report['threat_intelligence']['server'] }}</li>
+            <li class="list-group-item"><strong>Content Type:</strong> {{ $report['threat_intelligence']['content_type'] }}</li>
+            <li class="list-group-item"><strong>ETag:</strong> {{ $report['threat_intelligence']['etag'] }}</li>
+            <li class="list-group-item"><strong>Response Code:</strong> {{ $report['threat_intelligence']['response_code'] }}</li>
+        </ul>
+    </div>
+</div>
+
         <div class="text-center mb-4">
             <button class="btn btn-success" onclick="downloadReport()">Download Report</button>
         </div>

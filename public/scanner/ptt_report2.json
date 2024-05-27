@@ -56,20 +56,7 @@
 	- Recommendation: We recommend you to upgrade the affected software to the latest version in order to eliminate the risk of these vulnerabilities.
 
 
-[38;5;226m[3] Missing security header: Content-Security-Policy[m
-[38;5;226m	- Risk Level: 1 (Low)
-
-[m	Vulnerability Details:
-	- Evidence 1:
-		- URL: http://juice-shop.herokuapp.com
-		- Evidence: Response does not include the HTTP Content-Security-Policy security header or meta tag Request / Response
-
-
-	- Description: We noticed that the target application lacks the Content-Security-Policy (CSP) header in its HTTP responses. The CSP header is a security measure that instructs web browsers to enforce specific security rules, effectively preventing the exploitation of Cross-Site Scripting (XSS) vulnerabilities.
-	- Recommendation: Configure the Content-Security-Header to be sent with each HTTP response in order to apply the specific policies needed by the application.
-
-
-[38;5;226m[4] Missing security header: Referrer-Policy[m
+[38;5;226m[3] Missing security header: Referrer-Policy[m
 [38;5;226m	- Risk Level: 1 (Low)
 
 [m	Vulnerability Details:
@@ -80,6 +67,19 @@
 
 	- Description: We noticed that the target application's server responses lack the <code>Referrer-Policy</code> HTTP header, which controls how much referrer information the browser will send with each request originated from the current web application.
 	- Recommendation: The Referrer-Policy header should be configured on the server side to avoid user tracking and inadvertent information leakage. The value `no-referrer` of this header instructs the browser to omit the Referer header entirely.
+
+
+[38;5;226m[4] Missing security header: Content-Security-Policy[m
+[38;5;226m	- Risk Level: 1 (Low)
+
+[m	Vulnerability Details:
+	- Evidence 1:
+		- URL: http://juice-shop.herokuapp.com
+		- Evidence: Response does not include the HTTP Content-Security-Policy security header or meta tag Request / Response
+
+
+	- Description: We noticed that the target application lacks the Content-Security-Policy (CSP) header in its HTTP responses. The CSP header is a security measure that instructs web browsers to enforce specific security rules, effectively preventing the exploitation of Cross-Site Scripting (XSS) vulnerabilities.
+	- Recommendation: Configure the Content-Security-Header to be sent with each HTTP response in order to apply the specific policies needed by the application.
 
 
 [38;5;226m[5] Server software and technology found[m
@@ -103,30 +103,42 @@
 		- Category: CDN
 
 	- Evidence 5:
+		- Software / Version: Font Awesome
+		- Category: Font scripts
+
+	- Evidence 6:
+		- Software / Version: Zone.js
+		- Category: JavaScript frameworks
+
+	- Evidence 7:
 		- Software / Version: Cowboy
 		- Category: Web servers
 
-	- Evidence 6:
+	- Evidence 8:
+		- Software / Version: core-js 3.37.1
+		- Category: JavaScript libraries
+
+	- Evidence 9:
 		- Software / Version: jQuery 2.2.4
 		- Category: JavaScript libraries
 
-	- Evidence 7:
+	- Evidence 10:
 		- Software / Version: Webpack
 		- Category: Miscellaneous
 
-	- Evidence 8:
+	- Evidence 11:
 		- Software / Version: Module Federation
 		- Category: Miscellaneous
 
-	- Evidence 9:
+	- Evidence 12:
 		- Software / Version: Heroku
 		- Category: PaaS
 
-	- Evidence 10:
+	- Evidence 13:
 		- Software / Version: Osano
 		- Category: Cookie compliance
 
-	- Evidence 11:
+	- Evidence 14:
 		- Software / Version: TypeScript
 		- Category: Programming languages
 
@@ -167,8 +179,8 @@
 |  Medium Risk Findings: 2                       |
 |  Low Risk Findings: 4                          |
 |  Info Risk Findings: 12                        |
-|  Start time: 2024-05-27 02:34:12               |
-|  End time: 2024-05-27 02:34:42                 |
+|  Start time: 2024-05-28 00:51:07               |
+|  End time: 2024-05-28 00:51:27                 |
 |                                                |
 +------------------------------------------------+
 

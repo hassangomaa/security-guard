@@ -27,19 +27,52 @@ def run_ptt_scan(target):
     print(result)
     return result
 
+def fetch_http_headers(domain):
+    """Fetch HTTP headers from the domain to get server type, content type, etc."""
+    try:
+        response = requests.head(f"http://{domain}")
+        headers = response.headers
+        return {
+            "server": headers.get("Server", ""),
+            "content_type": headers.get("Content-Type", ""),
+            "etag": headers.get("ETag", ""),
+            "response_code": response.status_code
+        }
+    except requests.RequestException as e:
+        logging.error(f"Failed to fetch HTTP headers: {e}")
+        return {}
 
 def check_threat_intelligence(domain, api_key):
-    print(f"Checking threat intelligence for {domain}")
-    headers = {
-        'X-OTX-API-KEY': api_key
-    }
+    logging.info(f"Checking threat intelligence for {domain}")
+    headers = {'X-OTX-API-KEY': api_key}
     url = f"https://otx.alienvault.com/api/v1/indicators/domain/{domain}/general"
-    response = requests.get(url, headers=headers)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print(f"Failed to fetch data from OTX: {response.status_code}")
-        return {"error": f"Failed to fetch data from OTX: {response.status_code}"}
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        threat_intel_data = response.json()
+        
+        # Fetch additional HTTP header information
+        http_headers = fetch_http_headers(domain)
+        threat_intel_data.update(http_headers)
+        
+        logging.info("Threat intelligence data fetched successfully.")
+        return threat_intel_data
+    except requests.RequestException as e:
+        logging.error(f"Failed to fetch data from OTX: {e}")
+        return {"error": f"Failed to fetch data from OTX: {e}"}
+
+# def check_threat_intelligence(domain, api_key):
+#     print(f"Checking threat intelligence for {domain}")
+#     headers = {
+#         'X-OTX-API-KEY': api_key
+#     }
+#     url = f"https://otx.alienvault.com/api/v1/indicators/domain/{domain}/general"
+#     response = requests.get(url, headers=headers)
+#     if response.status_code == 200:
+#         return response.json()
+#     else:
+#         print(f"Failed to fetch data from OTX: {response.status_code}")
+#         return {"error": f"Failed to fetch data from OTX: {response.status_code}"}
 
 def save_ptt_results(ptt_results):
     report_path = os.path.join(os.path.dirname(__file__), "ptt_report2.json")

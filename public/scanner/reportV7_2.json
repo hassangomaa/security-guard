@@ -39,8 +39,8 @@
             "cvss": "",
             "cve": "",
             "summary": "",
-            "description": "We noticed that the target application lacks the Content-Security-Policy (CSP) header in its HTTP responses. The CSP header is a security measure that instructs web browsers to enforce specific security rules, effectively preventing the exploitation of Cross-Site Scripting (XSS) vulnerabilities.",
-            "recommendation": "Configure the Content-Security-Header to be sent with each HTTP response in order to apply the specific policies needed by the application.",
+            "description": "We noticed that the target application's server responses lack the <code>Referrer-Policy</code> HTTP header, which controls how much referrer information the browser will send with each request originated from the current web application.",
+            "recommendation": "The Referrer-Policy header should be configured on the server side to avoid user tracking and inadvertent information leakage. The value `no-referrer` of this header instructs the browser to omit the Referer header entirely.",
             "endpoint": "http://juice-shop.herokuapp.com",
             "affected_software": ""
         },
@@ -53,8 +53,8 @@
             "cvss": "",
             "cve": "",
             "summary": "",
-            "description": "We noticed that the target application's server responses lack the <code>Referrer-Policy</code> HTTP header, which controls how much referrer information the browser will send with each request originated from the current web application.",
-            "recommendation": "The Referrer-Policy header should be configured on the server side to avoid user tracking and inadvertent information leakage. The value `no-referrer` of this header instructs the browser to omit the Referer header entirely.",
+            "description": "We noticed that the target application lacks the Content-Security-Policy (CSP) header in its HTTP responses. The CSP header is a security measure that instructs web browsers to enforce specific security rules, effectively preventing the exploitation of Cross-Site Scripting (XSS) vulnerabilities.",
+            "recommendation": "Configure the Content-Security-Header to be sent with each HTTP response in order to apply the specific policies needed by the application.",
             "endpoint": "http://juice-shop.herokuapp.com",
             "affected_software": ""
         },
@@ -132,6 +132,10 @@
                 }
             }
         },
-        "false_positive": []
+        "false_positive": [],
+        "server": "Cowboy",
+        "content_type": "text/html; charset=UTF-8",
+        "etag": "W/\"ea4-18fbbc93d3b\"",
+        "response_code": 200
     }
 }
