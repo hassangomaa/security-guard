@@ -1,7 +1,0 @@
-{
-    "domain": "https://bwapp.hakhub.net",
-    "vulnerabilities": [],
-    "threat_intelligence": {
-        "error": "Failed to fetch data from OTX: 404"
-    }
-}
