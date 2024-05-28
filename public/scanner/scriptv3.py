@@ -61,18 +61,6 @@ def check_threat_intelligence(domain, api_key):
         logging.error(f"Failed to fetch data from OTX: {e}")
         return {"error": f"Failed to fetch data from OTX: {e}"}
 
-# def check_threat_intelligence(domain, api_key):
-#     print(f"Checking threat intelligence for {domain}")
-#     headers = {
-#         'X-OTX-API-KEY': api_key
-#     }
-#     url = f"https://otx.alienvault.com/api/v1/indicators/domain/{domain}/general"
-#     response = requests.get(url, headers=headers)
-#     if response.status_code == 200:
-#         return response.json()
-#     else:
-#         print(f"Failed to fetch data from OTX: {response.status_code}")
-#         return {"error": f"Failed to fetch data from OTX: {response.status_code}"}
 
 def save_ptt_results(ptt_results):
     report_path = os.path.join(os.path.dirname(__file__), "ptt_report2.json")
