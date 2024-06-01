@@ -21,6 +21,7 @@ class ScanController extends Controller
         public function scan(Request $request)
         {
             try {
+                sleep(5);
                 // $url = $request->input('url');
                 // $otxApiKey = env('OTX_API_KEY'); // Ensure this is set in your .env file
                 
