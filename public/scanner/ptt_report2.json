@@ -1,0 +1,187 @@
+API key may be old, regenerating
++----------------------------------------------------------+
+|                Vulnerability Scan Report                 |
++----------------------------------------------------------+
+
+
+[38;5;214m[1] Communication is not secure[m
+[38;5;214m	- Risk Level: 2 (Medium)
+
+[m	Vulnerability Details:
+	- Evidence 1:
+		- URL: http://juice-shop.herokuapp.com
+		- Response URL: http://juice-shop.herokuapp.com/
+		- Evidence: Communication is made over unsecure, unencrypted HTTP.
+
+
+	- Description: We noticed that the communication between the web browser and the server is done using the HTTP protocol, which transmits data unencrypted over the network.
+	- Recommendation: We recommend you to reconfigure the web server to use HTTPS - which encrypts the communication between the web browser and the server.
+
+
+[38;5;214m[2] Vulnerabilities found for server-side software[m
+[38;5;214m	- Risk Level: 2 (Medium)
+
+[m	Vulnerability Details:
+	- CVE-2020-23064:
+		- Risk Level: 
+		- CVSS: 6.1
+		- Summary: Cross Site Scripting vulnerability in jQuery 2.2.0 through 3.x before 3.5.0 allows a remote attacker to execute arbitrary code via the <options> element.
+		- Affected software: jquery 2.2.4
+
+	- CVE-2020-11022:
+		- Risk Level: 
+		- CVSS: 4.3
+		- Summary: In jQuery versions greater than or equal to 1.2 and before 3.5.0, passing HTML from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0.
+		- Affected software: jquery 2.2.4
+
+	- CVE-2020-11023:
+		- Risk Level: 
+		- CVSS: 4.3
+		- Summary: In jQuery versions greater than or equal to 1.0.3 and before 3.5.0, passing HTML containing <option> elements from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0.
+		- Affected software: jquery 2.2.4
+
+	- CVE-2019-11358:
+		- Risk Level: 
+		- CVSS: 4.3
+		- Summary: jQuery before 3.4.0, as used in Drupal, Backdrop CMS, and other products, mishandles jQuery.extend(true, {}, ...) because of Object.prototype pollution. If an unsanitized source object contained an enumerable __proto__ property, it could extend the native Object.prototype.
+		- Affected software: jquery 2.2.4
+
+	- CVE-2015-9251:
+		- Risk Level: 
+		- CVSS: 4.3
+		- Summary: jQuery before 3.0.0 is vulnerable to Cross-site Scripting (XSS) attacks when a cross-domain Ajax request is performed without the dataType option, causing text/javascript responses to be executed.
+		- Affected software: jquery 2.2.4
+
+
+	- Description: We noticed known vulnerabilities in the target application. They are usually related to outdated systems and expose the affected applications to the risk of unauthorized access to confidential data and possibly denial of service attacks.
+	- Recommendation: We recommend you to upgrade the affected software to the latest version in order to eliminate the risk of these vulnerabilities.
+
+
+[38;5;226m[3] Missing security header: Content-Security-Policy[m
+[38;5;226m	- Risk Level: 1 (Low)
+
+[m	Vulnerability Details:
+	- Evidence 1:
+		- URL: http://juice-shop.herokuapp.com
+		- Evidence: Response does not include the HTTP Content-Security-Policy security header or meta tag Request / Response
+
+
+	- Description: We noticed that the target application lacks the Content-Security-Policy (CSP) header in its HTTP responses. The CSP header is a security measure that instructs web browsers to enforce specific security rules, effectively preventing the exploitation of Cross-Site Scripting (XSS) vulnerabilities.
+	- Recommendation: Configure the Content-Security-Header to be sent with each HTTP response in order to apply the specific policies needed by the application.
+
+
+[38;5;226m[4] Missing security header: Referrer-Policy[m
+[38;5;226m	- Risk Level: 1 (Low)
+
+[m	Vulnerability Details:
+	- Evidence 1:
+		- URL: http://juice-shop.herokuapp.com
+		- Evidence: Response headers do not include the Referrer-Policy HTTP security header as well as the <meta> tag with name 'referrer' is not present in the response. Request / Response
+
+
+	- Description: We noticed that the target application's server responses lack the <code>Referrer-Policy</code> HTTP header, which controls how much referrer information the browser will send with each request originated from the current web application.
+	- Recommendation: The Referrer-Policy header should be configured on the server side to avoid user tracking and inadvertent information leakage. The value `no-referrer` of this header instructs the browser to omit the Referer header entirely.
+
+
+[38;5;226m[5] Server software and technology found[m
+[38;5;226m	- Risk Level: 1 (Low)
+
+[m	Vulnerability Details:
+	- Evidence 1:
+		- Software / Version: Cloudflare
+		- Category: CDN
+
+	- Evidence 2:
+		- Software / Version: Erlang
+		- Category: Programming languages
+
+	- Evidence 3:
+		- Software / Version: Angular 15.2.10
+		- Category: JavaScript frameworks
+
+	- Evidence 4:
+		- Software / Version: cdnjs
+		- Category: CDN
+
+	- Evidence 5:
+		- Software / Version: Font Awesome
+		- Category: Font scripts
+
+	- Evidence 6:
+		- Software / Version: Zone.js
+		- Category: JavaScript frameworks
+
+	- Evidence 7:
+		- Software / Version: Cowboy
+		- Category: Web servers
+
+	- Evidence 8:
+		- Software / Version: core-js 3.37.1
+		- Category: JavaScript libraries
+
+	- Evidence 9:
+		- Software / Version: jQuery 2.2.4
+		- Category: JavaScript libraries
+
+	- Evidence 10:
+		- Software / Version: Webpack
+		- Category: Miscellaneous
+
+	- Evidence 11:
+		- Software / Version: Module Federation
+		- Category: Miscellaneous
+
+	- Evidence 12:
+		- Software / Version: Heroku
+		- Category: PaaS
+
+	- Evidence 13:
+		- Software / Version: Osano
+		- Category: Cookie compliance
+
+	- Evidence 14:
+		- Software / Version: TypeScript
+		- Category: Programming languages
+
+
+	- Description: We noticed that server software and technology details are exposed, potentially aiding attackers in tailoring specific exploits against identified systems and versions.
+	- Recommendation: We recommend you to eliminate the information which permits the identification of software platform, technology, server and operating system: HTTP server headers, HTML meta information, etc.
+
+
+[38;5;226m[6] Robots.txt file found[m
+[38;5;226m	- Risk Level: 1 (Low)
+
+[m	Vulnerability Details:
+	- Evidence 1:
+		- URL: http://juice-shop.herokuapp.com/robots.txt
+
+
+	- Description: We found the robots.txt on the target server. This file instructs web crawlers what URLs and endpoints of the web application they can visit and crawl. Website administrators often misuse this file while attempting to hide some web pages from the users.
+	- Recommendation: We recommend you to manually review the entries from robots.txt and remove the ones which lead to sensitive locations in the website (ex. administration panels, configuration files, etc).
+
+
+[32m[7] Website is accessible.[m
+[32m[8] Nothing was found for client access policies.[m
+[32m[9] Nothing was found for absence of the security.txt file.[m
+[32m[10] Nothing was found for use of untrusted certificates.[m
+[32m[11] Nothing was found for enabled HTTP debug methods.[m
+[32m[12] Nothing was found for directory listing.[m
+[32m[13] Nothing was found for missing HTTP header - Strict-Transport-Security.[m
+[32m[14] Nothing was found for missing HTTP header -  X-Content-Type-Options.[m
+[32m[15] Nothing was found for domain too loose set for cookies.[m
+[32m[16] Nothing was found for HttpOnly flag of cookie.[m
+[32m[17] Nothing was found for Secure flag of cookie.[m
+[32m[18] Nothing was found for unsafe HTTP header Content Security Policy.[m
+
++----------------- TEST summary -----------------+
+|                                                |
+|  URL: http://juice-shop.herokuapp.com/         |
+|  High Risk Findings: 0                         |
+|  Medium Risk Findings: 2                       |
+|  Low Risk Findings: 4                          |
+|  Info Risk Findings: 12                        |
+|  Start time: 2024-06-01 14:45:35               |
+|  End time: 2024-06-01 14:46:02                 |
+|                                                |
++------------------------------------------------+
+

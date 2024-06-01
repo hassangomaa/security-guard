@@ -44,7 +44,7 @@
                 <form action="{{ route('scan') }}" method="POST" onsubmit="return validateForm()">
     @csrf
     <label for="url" class="light">Domain</label>
-    <input  id="url" name="url" placeholder="Enter URL" />
+    <input   id="url" disabled  name="url"  value="juice-shop.herokuapp.com" placeholder="Enter URL" />
 
 
 
